@@ -1,0 +1,80 @@
+<div layout="row" ng-controller="AppCtrl" ng-cloak>
+    
+    <div layout="column" class="relative" layout-fill role="main">
+       <md-toolbar layout="row" class="">
+            <md-toolbar ng-show="!showSearch" class="md-whiteframe-z2">
+                  <div class="md-toolbar-tools">
+                    <h3>
+                      Student List
+                    </h3>
+                    <span flex></span>
+                    <md-button aria-label="Search" ng-click="showSearch = !showSearch" class="md-icon-button md-primary md-button md-ink-ripple">
+                      <ng-md-icon icon="search"> <img src="assets/search.svg" alt=""> </ng-md-icon>
+                    </md-button>
+                    <md-button aria-label="Add student" ng-click="addForm($event)" class="md-icon-button md-primary md-button md-ink-ripple">
+                      <ng-md-icon icon="more_vert"> <img src="assets/user-plus.svg" alt=""> </ng-md-icon>
+                    </md-button>
+                  </div>
+                </md-toolbar>
+                <md-toolbar class="md-hue-1 md-whiteframe-z2" ng-show="showSearch">
+                      <div class="md-toolbar-tools">
+                        <md-button ng-click="showSearch = !showSearch" aria-label="Back" class="md-icon-button md-primary md-button md-ink-ripple">
+                          <ng-md-icon icon="arrow_back"> <img src="assets/arrow-left2.svg" alt=""> </ng-md-icon>
+                        </md-button>
+                        <md-input-container md-theme="input" flex>
+                          <label>&nbsp;</label>
+                          <input ng-model="searchStr" placeholder="Search student">
+                        </md-input-container>
+                        <md-button aria-label="Search" ng-click="showSearch = !showSearch" class="md-icon-button md-primary md-button md-ink-ripple">
+                          <ng-md-icon icon="search"> <img src="assets/search.svg" alt=""> </md-icon>
+                        </md-button>
+                     </div>
+
+                </md-toolbar>
+
+        </md-toolbar>
+
+        <div class="container remove_mrgn--bottom">
+          <md-content layout = "row" layout-xs="column" class="selise_content">
+            <md-list flex class="selise_student-lists width--100 pad_all--20">
+                <md-subheader class="md-no-sticky">Class 12</md-subheader>
+                <div  class="md-raised md-primary selise_student-list" ng-repeat="info in studentsDetails | filter:searchStr">
+                    <md-list-item  md-swipe-left="onSwipeLeft(info)"  ng-click="showGreeting($event); addInfo(info)" class="md-2-line selise_student-list-item selise_left_border">
+                        <img ng-src="{{info.face}}?{{$index}}" class="md-avatar" alt="{{info.name}}" />
+                        <div class="md-list-item-text" layout="row"  layout-align="space-between center">
+                          <div>
+                              <h3>{{ info.name }}</h3>
+                              <p>{{ info.roll }}</p>
+                          </div>
+                          <div>
+                                <h3>Age : {{ info.age }}</h3>
+                          </div>
+                        </div>
+                    </md-list-item>  
+                </div>
+            </md-list>
+            
+            <md-list flex class="selise_student-lists width--100 pad_all--20">
+                    <md-subheader class="md-no-sticky">Class 12</md-subheader>
+                    <div  class="md-raised md-primary selise_student-list" ng-repeat="info in studentsDetails | filter:searchStr">
+                        <md-list-item  md-swipe-left="onSwipeLeft(info)"  ng-click="showGreeting($event); addInfo(info)" class="md-2-line selise_student-list-item selise_left_border">
+                            <img ng-src="{{info.face}}?{{$index}}" class="md-avatar" alt="{{info.name}}" />
+                            <div class="md-list-item-text" layout="row"  layout-align="space-between center">
+                              <div>
+                                  <h3>{{ info.name }}</h3>
+                                  <p>{{ info.roll }}</p>
+                              </div>
+                              <div>
+                                    <h3>Age : {{ info.age }}</h3>
+                              </div>
+                            </div>
+                        </md-list-item>  
+                    </div>
+                </md-list>
+            
+          </md-content>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+$gray: #eee;
+
+md-content.md-default-theme {
+  background-color: $gray;
+}
+
+md-toolbar {
+  .md-button.md-default-theme {
+    border-radius: 99%; // round toolbar buttons
+  }
+}
+
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+
+.md-errors-spacer {
+  display: none;
+}

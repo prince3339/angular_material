@@ -1,0 +1,62 @@
+            <md-toolbar><h2 class="pad_top--15 txt_center">Register</h2></md-toolbar>
+            <md-content layout-padding>
+              <div class="remove_mrgn--bottom">
+                <form name="registerForm">
+                    <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex>
+                          <label>Name</label>
+                          <input ng-model="user.name" required="">
+                        </md-input-container>
+                        <div flex="5" hide-xs hide-sm>
+                          <!-- Spacer //-->
+                        </div>
+                        <md-input-container class="md-block" flex>
+                          <label>Age</label>
+                          <input ng-model="user.age" type="number" step="1" required="">
+                        </md-input-container>
+                    </div>
+<!--
+                      <md-input-container class="md-block" flex>
+                          <label>Class</label>
+                          <input ng-model="user.class">
+                      </md-input-container>
+                      
+-->     
+                    <div layout="row">
+                        <md-autocomplete class="selise_autocomplete" flex ng-model ="user.selectedItem"
+                            md-selected-item="userSelectedItem"
+                            md-search-text-change="searchTextChange(searchText)"
+                            md-search-text="searchText"
+                            md-selected-item-change="selectedItemChange(item)"
+                            md-items="item in student | filter: searchText"
+                            md-item-text="item.class"
+                            md-min-length="0"
+                            placeholder="Class Name">
+                            <md-item-template>
+                              <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.class}}</span>
+                            </md-item-template>
+                        </md-autocomplete>
+                        <div flex="5" hide-xs hide-sm>
+                          <!-- Spacer //-->
+                        </div>
+                        <md-input-container class="md-block" flex>
+                            <label>Roll</label>
+                            <input ng-model="user.roll" required="">
+                        </md-input-container>
+                    </div>
+                    
+                    <md-radio-group  layout-align="space-between center" layout="row" ng-model="user.section" required>
+                        <md-radio-button value="A" class="md-primary">Section A</md-radio-button>
+                        <md-radio-button value="B" class="md-primary">Section B </md-radio-button>
+                        <md-radio-button value="c" class="md-primary">Section C </md-radio-button>
+                    </md-radio-group>
+                    
+                    <div layout = "row" class="pad_top--15 pad_bottom--15">
+                        <md-datepicker ng-model="user.date_of_birth" md-placeholder="Birth Date">
+                        </md-datepicker>
+                    </div>
+                    
+                    <md-button class="md-raised md-primary"  ng-disabled="registerForm.$invalid" type="submit" ng-click="saveValue(user)" >Save</md-button>
+                    </form>
+                </div>
+            </md-content>

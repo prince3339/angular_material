@@ -1,0 +1,35 @@
+<md-toolbar class="selise_header md-warn">
+    <h1>{{studentDetails.studentName}}</h1>
+</md-toolbar>
+
+<md-content class="pad_top--50" layout-padding flex layout="row" layout-xs="column">
+    <div  flex-gt-sm="50">
+        <div class="selise_student-profile">
+            <img class="selise_student-profile--img" ng-src="assets/placeholder.png" src="assets/placeholder.png" alt="">
+        </div>
+    </div>
+    <div flex>
+        <div layout="row">
+            <span flex>Name:</span> <span flex>{{studentDetails.studentName}}</span>
+        </div>
+        <div layout="row">
+            <span flex>Age:</span> <span flex>{{studentDetails.age}}</span>
+        </div>
+
+        <div layout="row">
+            <span flex>Class:</span> <span flex>{{studentDetails.class}}</span>
+        </div>
+
+        <div layout="row">
+            <span flex>Roll:</span> <span flex>{{studentDetails.address}}</span>
+        </div>
+
+        <div layout="row">
+            <span flex>Date of Birth:</span> <span flex>{{studentDetails.date}}</span>
+        </div>
+
+        <div layout="row">
+            <span flex>section:</span> <span flex>{{studentDetails.section}}</span>
+        </div>
+    </div>
+</md-content>

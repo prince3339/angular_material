@@ -1,0 +1,52 @@
+
+
+<md-dialog class="selise_diaglog" aria-label="Mango (Fruit)"  ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Student Profile</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="assets/cross.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content class="selise_diaglog_content pad_left--25 pad_right--25">
+      <div class="md-dialog-content">
+
+
+        <div class="" layout-padding layout="column" layout-xs="column">
+            <div>
+                <div class="selise_student-profile">
+                    <img class="selise_student-profile--img" ng-src="assets/placeholder.png" src="assets/placeholder.png" alt="">
+                </div>
+            </div>
+            <div flex>
+                <div layout="row" layout-align="space-between center">
+                    <span>Name:</span> <span>{{studentName}}</span>
+                </div>
+                <div layout="row" layout-align="space-between center">
+                    <span>Age:</span> <span>{{age}}</span>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <span>Class:</span> <span>{{class}}</span>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <span>Roll:</span> <span>{{roll}}</span>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <span>Date of Birth:</span> <span>{{date_of_birth}}</span>
+                </div>
+
+                <div layout="row" layout-align="space-between center">
+                    <span>section</span> <span>{{section}}</span>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </md-dialog-content>
+</md-dialog>
+

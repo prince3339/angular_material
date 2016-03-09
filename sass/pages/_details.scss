@@ -1,0 +1,20 @@
+.selise{
+    &_student-profile{
+      text-align: center;;
+      &--img{
+        width: 200px;
+        height: 200px;
+
+        border-radius: 50%;
+      }
+    }
+}
+
+.student_details{
+    padding: 20px;
+}
+
+.selise_diaglog{
+    min-width: 30%;
+}
+

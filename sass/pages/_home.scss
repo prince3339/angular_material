@@ -1,0 +1,63 @@
+.selise_content{
+    //background-color:  map-deep-get($colors, "background", "orange");
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.selise{
+  &_content{
+    //background-color:  map-deep-get($colors, "background", "orange");
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;  
+  }
+  
+  &_student-lists{
+    //padding-left: 4rem;
+  }
+  
+  &_student-list{
+    
+    .selise_student-list-item{
+        margin-bottom: 1rem;
+        background-color: map-deep-get($colors, "buttons", "darkish-white");
+        min-height: 10rem;  
+        
+        //border-radius: 1.5rem;
+        
+        button {
+            min-height: 10rem;
+        }
+    }
+      
+    &:hover{
+      cursor: pointer;
+      
+      .selise_student-list-item{
+        background-color: map-deep-get($colors, "buttons", "darkish-white");
+          
+        border-radius: 1.5rem;
+      }
+    }
+    
+    &:focus{
+      cursor: pointer;
+    }
+  }
+}
+
+.selise_left_border {
+    //padding: 20px;
+    
+    //margin: 20px 0;
+    
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    border-left-color: #428bca;
+}
+
+.selise_content{
+  overflow: visible;
+}
